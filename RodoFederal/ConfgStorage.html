@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <title>StorageADM - Rodo Federal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e6f0ff;
+        }
+        
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        header h1 {
+            font-size: 24px;
+        }
+        
+        header img {
+            height: 50px;
+        }
+        
+        nav {
+            background-color: #0059b3;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 18px;
+            transition: background-color 0.3s;
+            padding: 8px 12px;
+            border-radius: 6px;
+        }
+        
+        nav a:hover {
+            background-color: #004080;
+        }
+        
+        main {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        
+        .btn,
+        .logout-btn {
+            background-color: #0066cc;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        
+        .btn:hover,
+        .logout-btn:hover {
+            background-color: #0055b3;
+            transform: scale(1.1);
+        }
+        
+        .logout-btn {
+            background-color: #ff4d4d;
+        }
+        
+        .logout-btn:hover {
+            background-color: #e60000;
+        }
+        
+        input[type="text"],
+        input[type="password"],
+        input[type="email"] {
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+        
+        .logo-direita {
+            position: absolute;
+            top: 5px;
+            right: 50px;
+            height: 50px;
+            width: auto;
+        }
+        
+        .logo-direita:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Rodo Federal</h1>
+        <img src="defaultAvatar.png" alt="Logo Rodo Federal" class="logo-direita" onclick="Conta()">
+    </header>
+
+    <nav>
+        <a href="Menu.html">Menu</a>
+        <a href="PosCastro.html">Voltar</a>
+        <a href="Contato.html">Contato</a>
+        <a href="login.html">Login</a>
+    </nav>
+
+    <main>
+        <h2>Bem-vindo à Rodo Federal</h2>
+        <p>Area reservada para o gerenciamento de dados e login.</p>
+        <br>
+        <br>
+        <button onclick="deletarDados()" class=" logout-btn">Deletar Dados Salvos</button>
+    </main>
+
+    <footer>
+        &copy; 2025 Rodo Federal - Todos os direitos reservados
+    </footer>
+    <script>
+        function deletarDados() {
+            localStorage.removeItem('usuario');
+            localStorage.removeItem('senha');
+            alert('Dados apagados do Local Storage.');
+        }
+
+        function Conta() {
+            window.location.href = "login.html"
+
+        }
+    </script>
+</body>
+
+</html>

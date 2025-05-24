@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <title>Contato - Rodo Federal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e6f0ff;
+        }
+        
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        header h1 {
+            font-size: 24px;
+        }
+        
+        header img {
+            height: 50px;
+        }
+        
+        nav {
+            background-color: #0059b3;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 18px;
+            transition: background-color 0.3s;
+            padding: 8px 12px;
+            border-radius: 6px;
+        }
+        
+        nav a:hover {
+            background-color: #004080;
+        }
+        
+        main {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        
+        .logo-direita {
+            position: absolute;
+            top: 5px;
+            right: 50px;
+            height: 50px;
+            width: auto;
+        }
+        
+        .logo-direita:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Rodo Federal</h1>
+        <img src="defaultAvatar.png" alt="Logo Rodo Federal" class="logo-direita" onclick="Conta()">
+    </header>
+
+    <nav>
+        <a href="Menu.html">Menu</a>
+        <a href="PosCastro.html">Voltar</a>
+        <a href="Contato.html">Contato</a>
+        <a href="login.html">Login</a>
+    </nav>
+
+    <main>
+        <h2>Bem-vindo à Rodo Federal</h2>
+        <p>Eficiência em transporte rodoviário de cargas. Conectando destinos com segurança e pontualidade.</p>
+        <br>
+        <br>
+        <h3>Numero WhatZap:</h3>
+        <h4>(65)99235534</h4>
+        <br>
+        <h3>Numero Ovidora:</h3>
+        <h4>(65)9326636</h4>
+    </main>
+
+    <footer>
+        &copy; 2025 Rodo Federal - Todos os direitos reservados
+    </footer>
+    <script>
+        function Conta() {
+            window.location.href = "login.html"
+
+        }
+    </script>
+</body>
+
+</html>

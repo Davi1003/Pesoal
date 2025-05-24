@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <title>Logado - Rodo Federal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('612943b5b2a54.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .container {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0, 0, 50, 0.4);
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+            transition: background-color 0.5s, box-shadow 0.5s;
+        }
+        
+        .container:hover {
+            background-color: rgba(230, 240, 255, 0.95);
+            box-shadow: 0 0 20px rgba(0, 0, 100, 0.6);
+        }
+        
+        .header h1 {
+            color: #003366;
+            margin-bottom: 30px;
+        }
+        
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .btn,
+        .logout-btn {
+            background-color: #0066cc;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        
+        .btn:hover,
+        .logout-btn:hover {
+            background-color: #0055b3;
+            transform: scale(1.1);
+        }
+        
+        .logout-btn {
+            background-color: #ff4d4d;
+        }
+        
+        .logout-btn:hover {
+            background-color: #e60000;
+        }
+        
+        input[type="text"],
+        input[type="password"],
+        input[type="email"] {
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+        
+        .menu {
+            background-color: rgba(0, 0, 50, 0.7);
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        
+        .menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            margin: 0 15px;
+            padding: 10px;
+            transition: background-color 0.3s;
+        }
+        
+        .menu a:hover {
+            background-color: rgba(0, 0, 50, 0.8);
+            border-radius: 6px;
+        }
+        
+        .menu button {
+            background-color: #0059b3;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        
+        .menu button:hover {
+            background-color: #004080;
+        }
+        
+        .logo-direita {
+            position: absolute;
+            top: 5px;
+            right: 50px;
+            height: 50px;
+            width: auto;
+        }
+        
+        .logo-direita:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu">
+        <a href="login.html">Login</a>
+        <a href="castro.html">Cadastro</a>
+        <button onclick="irParaMenu()">Menu</button>
+        <img src="defaultAvatar.png" class="logo-direita" onclick="Conta()">
+    </div>
+    <div class="container">
+        <header class="header">
+            <h1>Bem-vindo à Rodo Federal</h1>
+        </header>
+        <main class="main-content">
+            <button class="btn" onclick="storage()">StoregeADM</button>
+            <button class="btn" onclick="Contato()">Contato</button>
+            <button class="btn">Solicitar Orçamento</button>
+            <button class="logout-btn" onclick="logout()">Deslogar</button>
+        </main>
+    </div>
+
+    <script>
+        function logout() {
+            window.location.href = "login.html";
+        }
+
+        function irParaMenu() {
+            window.location.href = "Menu.html";
+        }
+
+        function Conta() {
+            window.location.href = "login.html"
+
+        }
+
+        function storage() {
+            window.location.href = "ConfgStorage.html"
+        }
+
+        function Contato() {
+            window.location.href = "Contato.html"
+        }
+    </script>
+</body>
+
+</html>
+
+</html>

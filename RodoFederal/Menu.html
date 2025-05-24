@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rodo Federal</title>
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('612943b5b2a54.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .menu {
+            background-color: rgba(0, 0, 50, 0.7);
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        
+        .menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            margin: 0 15px;
+            padding: 10px;
+            transition: background-color 0.3s;
+        }
+        
+        .menu a:hover {
+            background-color: rgba(0, 0, 50, 0.8);
+            border-radius: 6px;
+        }
+        
+        .cadastro-container {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0, 0, 50, 0.4);
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+            transition: background-color 0.5s, box-shadow 0.5s;
+            margin-top: 80px;
+        }
+        
+        .cadastro-container:hover {
+            background-color: rgba(230, 240, 255, 0.95);
+            box-shadow: 0 0 20px rgba(0, 0, 100, 0.6);
+        }
+        
+        .cadastro-container h2 {
+            margin-bottom: 20px;
+            color: #003366;
+        }
+        
+        .cadastro-container input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #99ccff;
+            border-radius: 6px;
+            background-color: #f2f9ff;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+        
+        .cadastro-container input:hover {
+            background-color: #d0e7ff;
+            border-color: #66b3ff;
+        }
+        
+        .cadastro-container button {
+            width: 100%;
+            padding: 12px;
+            background-color: #0059b3;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+        
+        .cadastro-container button:hover {
+            background-color: #004080;
+        }
+        
+        .menu button {
+            background-color: #0059b3;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        
+        .menu button:hover {
+            background-color: #004080;
+        }
+        
+        .logo-direita {
+            position: absolute;
+            top: 5px;
+            right: 50px;
+            height: 50px;
+            width: auto;
+        }
+        
+        .logo-direita:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu">
+        <a href="login.html">Login</a>
+        <a href="castro.html">Cadastro</a>
+        <button onclick="irParaMenu()">Menu</button>
+        <img src="defaultAvatar.png" class="logo-direita" onclick="Conta()">
+    </div>
+    <div class="cadastro-container">
+        <h1>Bem-vindo à Rodo Federal!</h1>
+        <p>Rodo Federal — Sua carga no destino, com segurança e pontualidade.</p>
+        <p>Locais de entrega:</p>
+        <p>Estados de entrega: MG,GO e MS
+        </p>
+    </div>
+    <script>
+        function irParaMenu() {
+            window.location.href = "Menu.html";
+        }
+
+        function Conta() {
+            window.location.href = "login.html"
+        }
+    </script>
+</body>
+
+</html>
