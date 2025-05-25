@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sair de Casa?</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #89f7fe, #66a6ff);
+        }
+        
+        h1 {
+            margin-bottom: 40px;
+            color: #fff;
+            font-size: 2.5rem;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .buttons {
+            position: relative;
+            width: 300px;
+            height: 200px;
+        }
+        
+        button {
+            padding: 12px 24px;
+            font-size: 16px;
+            cursor: pointer;
+            position: absolute;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        
+        #sim {
+            left: 0;
+            bottom: 0;
+            background-color: #28a745;
+            color: white;
+        }
+        
+        #sim:hover {
+            background-color: #218838;
+            transform: scale(1.05);
+        }
+        
+        #nao {
+            left: 100px;
+            top: 0;
+            background-color: #dc3545;
+            color: white;
+        }
+        
+        #nao:hover {
+            background-color: #c82333;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Vai nega?</h1>
+    <div class="buttons">
+        <button id="sim">Sim</button>
+        <button id="nao">Não</button>
+    </div>
+
+    <script>
+        const naoBtn = document.getElementById('nao');
+        const simBtn = document.getElementById('sim');
+
+        naoBtn.addEventListener('mouseenter', () => {
+            const maxX = 250;
+            const maxY = 150;
+
+            const randomX = Math.floor(Math.random() * maxX);
+            const randomY = Math.floor(Math.random() * maxY);
+
+            naoBtn.style.left = `${randomX}px`;
+            naoBtn.style.top = `${randomY}px`;
+        });
+
+        naoBtn.addEventListener('click', () => {
+            window.location.href = 'https://github.com/Davi1003';
+        });
+
+        simBtn.addEventListener('click', () => {
+            window.location.href = 'https://github.com/Davi1003';
+        });
+    </script>
+</body>
+
+</html>
