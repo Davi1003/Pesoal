@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senhas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(120deg, #89f7fe, #66a6ff);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 90%;
+            max-width: 400px;
+        }
+        
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+        
+        .botoes {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+        
+        button {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🔐 Gerador de Senhas Seguras</h1>
+        <input type="number" id="tamanho" placeholder="Comprimento da senha" min="4" max="50">
+        <input type="text" id="senha" readonly placeholder="Sua senha vai aparecer aqui">
+        <div class="botoes">
+            <button onclick="gerarSenha()">Gerar Senha</button>
+            <button onclick="copiarSenha()">Copiar</button>
+        </div>
+    </div>
+
+    <script>
+        function gerarSenha() {
+            const length = document.getElementById('tamanho').value || 12;
+            const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+[]{}|;:,.<>?";
+            let senha = "";
+            for (let i = 0; i < length; i++) {
+                const randomIndex = Math.floor(Math.random() * charset.length);
+                senha += charset[randomIndex];
+            }
+            document.getElementById("senha").value = senha;
+        }
+
+        function copiarSenha() {
+            const senhaField = document.getElementById("senha");
+            senhaField.select();
+            senhaField.setSelectionRange(0, 99999); // Para mobile
+            document.execCommand("copy");
+            alert("Senha copiada!");
+        }
+    </script>
+</body>
+
+</html>
